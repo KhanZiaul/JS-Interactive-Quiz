@@ -24,6 +24,12 @@ quizs.addEventListener('submit', e => {
 
     scrollTo(0,0);
 
+    // First Way :
+
+    // document.getElementById ('scores').textContent = `${score}%`
+
+    // Another Way :
+
     const showOff = document.getElementById('result');
 
     showOff.style.display = 'block';
@@ -35,4 +41,32 @@ quizs.addEventListener('submit', e => {
     const finalResult = resultConverted + score;
 
     resultText.innerText = finalResult;
+
+    let i = 0;
+
+    const timer = setInterval(() => {
+
+    // first Way :
+
+    // document.getElementById ('scores').textContent = `${i}%`
+
+    // Another Way :
+
+        resultText.innerText = i;
+
+    // First Way if condition : if(i === score )
+
+        if(i === finalResult ){
+
+        clearInterval(timer);
+
+        }
+
+        else{
+            
+            i++;
+        }
+        
+    },100);
+
 });
