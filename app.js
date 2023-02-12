@@ -20,5 +20,19 @@ quizs.addEventListener('submit', e => {
         }
     });
 
-    console.log(score);
+    // show result
+
+    scrollTo(0,0);
+
+    const showOff = document.getElementById('result');
+
+    showOff.style.display = 'block';
+
+    const resultText = document.getElementById('scores');
+
+    const resultConverted = parseInt(resultText.innerText);
+
+    const finalResult = resultConverted + score;
+
+    resultText.innerText = finalResult;
 });
