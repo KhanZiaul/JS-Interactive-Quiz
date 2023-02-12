@@ -1,5 +1,5 @@
 
-const correctAnswer = ['B', 'B' ,'B' ,'B'];
+const correctAnswer = ['A', 'A' ,'B' ,'B'];
 
 const quizs = document.getElementById('quiz');
 
@@ -66,7 +66,7 @@ quizs.addEventListener('submit', e => {
             
             i++;
         }
-        
-    },100);
+
+    },15);
 
 });
